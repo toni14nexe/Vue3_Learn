@@ -1,11 +1,12 @@
 <template>
   <div>
-    <hr><br><br>
-      <img alt="Vue logo" class="logoSvg" src="./assets/logo.svg" />
-    <br><br><hr><br><br>
     <center>
-      <button @click="component='reactivity-component'">Async</button>
-
+      <hr><br><br>
+        <img alt="Vue logo" class="logoSvg" src="./assets/logo.svg" />
+      <br><br><hr><br><br>
+      <button @click="component='reactivity-component'">Reactivity</button>
+      <button @click="component='conditional-rendering'">Conditional</button>
+      <button @click="component='list-rendering'">List Rendering</button>
 
       <br><br><br><hr><br><br>
       <keep-alive><component v-bind:is="component"/></keep-alive>
@@ -15,15 +16,19 @@
 
 <script>
 import ReactivityComponent from './components/ReactivityComponent.vue';
+import ConditionalRendering from './components/ConditionalRendering.vue';
+import ListRendering from './components/ListRendering.vue';
 
 export default{
   name: 'App',
   components:{
-    'reactivity-component': ReactivityComponent
+    'reactivity-component': ReactivityComponent,
+    'conditional-rendering': ConditionalRendering,
+    'list-rendering': ListRendering,
   },
     data(){
       return{
-          component: 'reactivity-component'
+          component: 'list-rendering'
       }
     }
 }
@@ -32,7 +37,6 @@ export default{
 
 <style scoped>
   .logoSvg{
-    width: 50%;
-    margin-left: 25%;
+    width: 10%;
   }
 </style>

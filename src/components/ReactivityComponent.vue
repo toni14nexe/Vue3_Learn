@@ -17,6 +17,11 @@
         <h3>Get & Set - test</h3>
         <p>{{getMe('Toni', 'Kolarić')}}</p>
         <p>{{getMeComputed}}</p>
+        <br><br>
+        <h3>Playing with component printing</h3>
+        <p>{{car.name}}</p>
+        <p>{{car.colors[1]}}</p>
+        <br><br>
     </div>
 </template>
 
@@ -72,7 +77,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .inline{
         display: inline;
     }
